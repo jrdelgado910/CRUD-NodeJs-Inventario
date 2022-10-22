@@ -1,0 +1,47 @@
+{{#if tasks}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N.</th>
+        <th>Producto</th>
+        <th>Proveedor</th>
+        <th>Precio venta</th>
+        <th>Cantidad</th>
+        <th>Disponibilidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tasks}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{producto}}</td>
+          <td>{{proveedor}}</td>
+          <td>{{precioV}}</td>
+          <td>{{cantidad}}</td>
+          <td>
+            {{#if disponible}}
+              <a href="/toggleDone/{{_id}}" class="btn btn-warning">Bloqueado</a>
+            {{else}}
+              <a href="/toggleDone/{{_id}}" class="btn btn-success">Disponible</a>
+            {{/if}}
+          </td>
+          <td>
+            <a href="/edit/{{_id}}" class="btn btn-info">Update</a>
+            <a href="/delete/{{_id}}" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+<div class="h-100 d-flex aling-items-center justify-content-center">
+  <div class="text-center text-dark">
+    <h1>No hay Informacion</h1>
+    <img src="/icons/r.png" class="w-50" />
+  </div>
+</div>
+
+{{/if}}

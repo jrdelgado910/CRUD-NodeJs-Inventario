@@ -1,0 +1,55 @@
+<div class="container">
+  <div>
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-bady bg-dark p-4 text-white rounded-1">
+        <form action="/edit/{{tasks._id}}" method="post">
+
+          <div>
+            <label for="producto">Producto:</label>
+            <input
+              type="text"
+              class="form-control rounded-1 bg-dark text-white"
+              name="producto"
+              value="{{tasks.producto}}"
+
+            />
+          </div>
+
+          <div>
+            <label for="proveedor">Proveedor:</label>
+            <input
+              type="text"
+              name="proveedor"
+              class="form-control rounded-1 bg-dark text-white"
+              value="{{tasks.proveedor}}"
+            />
+          </div>
+
+           <div>
+            <label for="precioV">Precio de Venta:</label>
+            <input
+              type="number"
+              name="precioV"
+              class="form-control rounded-1 bg-dark text-white"
+              value="{{tasks.precioV}}"
+            />
+          </div>
+
+          <div>
+            <label for="cantidad">Cantidad de Unidades:</label>
+            <input
+              type="number"
+              name="cantidad"
+              class="form-control rounded-1 bg-dark text-white"
+              value="{{tasks.cantidad}}"
+            />
+          </div>
+          <br><br>
+
+          <button class="btn btn-primary">Update</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

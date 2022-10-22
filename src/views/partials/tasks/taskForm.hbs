@@ -1,0 +1,56 @@
+<div class="container">
+  <div>
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body p-4 rounded-1 bg-dark text-white">
+        <h1 class="text-center">Inventario</h1><br>
+        <h3>Nuevo Producto</h3>
+        <form action="/tasks/add" method="POST">
+
+          <div>
+            <label for="producto">Producto:</label>
+            <input
+              type="text"
+              class="form-control rounded-1 bg-dark text-white"
+              name="producto"
+              placeholder="Name"
+            />
+          </div>
+
+          <div>
+            <label for="proveedor">Proveedor:</label>
+            <input
+              type="text"
+              name="proveedor"
+              class="form-control rounded-1 bg-dark text-white"
+              placeholder="Name"
+            />
+          </div>
+
+           <div>
+            <label for="precioV">Precio de Venta:</label>
+            <input
+              type="number"
+              name="precioV"
+              class="form-control rounded-1 bg-dark text-white"
+              placeholder="$"
+            />
+          </div>
+
+          <div>
+            <label for="cantidad">Cantidad de Unidades:</label>
+            <input
+              type="number"
+              name="cantidad"
+              class="form-control rounded-1 bg-dark text-white"
+              placeholder="N°"
+            />
+          </div>
+
+          <button class="btn btn-primary btn-sm mt-2">Registrar</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
